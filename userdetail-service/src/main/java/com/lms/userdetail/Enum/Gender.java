@@ -2,7 +2,7 @@ package com.lms.userdetail.Enum;
 
 public enum Gender {
 
-	MALE,
+	MALE, 
 	FEMALE,
 	OTHERS
 }

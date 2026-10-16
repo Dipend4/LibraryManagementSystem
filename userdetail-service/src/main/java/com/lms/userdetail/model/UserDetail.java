@@ -6,8 +6,6 @@ import com.lms.userdetail.Enum.Gender;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -20,26 +18,29 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="detail_tbl")
+@Table(name="detail_table")
 public class UserDetail {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long detailId;
-	
-	@Column(nullable=false, length=50)
-	private String fullname;
-	
-	@Column(nullable=false, unique=true, length=15)
-	private String phone;
-	
-	@Enumerated(EnumType.STRING)
-	@Column(nullable=false)
-	private Gender gender;
-	
-	@Column(nullable=false, length=100)
-	private String address;
-	
-	@Column(nullable=false)
-	private LocalDate dob;
+	 @Id
+	 @GeneratedValue(strategy = GenerationType.IDENTITY)
+	 @Column(name = "detail_id")
+	 private Long detailId;
+
+	 @Column(nullable = false, length = 30)
+	 private String fullname;
+
+	 @Column(nullable = false, unique = true, length = 10)
+	 private String phone;
+
+	 @Column(nullable = false, length = 20)
+	 private Gender gender;
+
+	 @Column(nullable = false, length = 50)
+	 private String address;
+
+	 @Column(nullable = false)
+	 private LocalDate dob;
+	 
+	 @Column(name = "user_id", nullable = false, unique = true)
+	 private Long userId;
 }

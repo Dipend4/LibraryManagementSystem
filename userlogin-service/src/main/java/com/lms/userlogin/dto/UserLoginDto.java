@@ -1,7 +1,5 @@
 package com.lms.userlogin.dto;
 
-import java.time.LocalDateTime;
-
 import com.lms.userlogin.Enum.Role;
 
 import jakarta.validation.constraints.Email;
@@ -33,7 +31,4 @@ public class UserLoginDto {
 	
 	private boolean enabled;
 	
-	private LocalDateTime createdAt;
-	
-	private LocalDateTime updatedAt;
 }
