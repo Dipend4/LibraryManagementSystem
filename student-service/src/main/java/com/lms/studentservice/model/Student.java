@@ -41,5 +41,10 @@ public class Student {
     @Column(nullable=false)
     private LocalDate enrollmentDate;
     
+    @Column(name="user_id", nullable=false)
+    private Long userId;
+    
+    @Column(name="detail_id", nullable=false)
+    private Long detailId;
     
 }
